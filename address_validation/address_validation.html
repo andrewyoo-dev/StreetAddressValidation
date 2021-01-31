@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Home Address</title>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="address_validation.js"></script>
+	</head>
+	<body>
+        <fieldset><legend>Address Info</legend>
+            <div id="divEditInfo">
+                <table>
+                    <tr><td>First Name:</td>
+                        <td> <input type='text' class='info' id='fname' data-err='errfname' data-regex='^[A-Z]{0,50}$'></td>
+                        <td> <label class='inErr' id='errfname'></label></td></tr>
+                    <tr><td>Last Name:</td>
+                        <td> <input type='text' class='info' id='lname' data-err='errlname' data-regex='^[A-Z]{0,50}$'></td>
+                        <td> <label class='inErr' id='errlname'></label></td></tr>
+                    <tr><td>Street Address:</td>
+                        <td> <input type='text' class='info' id='street' data-err='errstreet' data-regex='^[A-Za-z0-9 .-]{0,50}$'></td>
+                        <td> <label class='inErr' id='errstreet'></label></td></tr>
+                    <tr><td>City:</td>
+                        <td> <input type='text' class='info' id='city' data-err='errcity' data-regex='^[A-Z]{0,25}$'></td>
+                        <td> <label class='inErr' id='errcity'></label></td></tr>
+                    <tr><td>State:</td>
+                        <td> <input type='text' class='info' id='state' data-err='errstate' data-regex='^(A[AELPKRSZ]|C[AOT]|D[CE]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])$'></td>
+                        <td> <label class='inErr' id='errstate'></label></td></tr>
+                    <tr><td>Zip:</td>
+                        <td> <input type='text' class='info' id='zip' data-err='errzip' data-regex='^([0-9]{5}(-[0-9]{4})?)$'></td>
+                        <td> <label class='inErr' id='errzip'></label></td></tr>
+                    <tr><td>Phone Number:</td>
+                        <td> <input type='text' class='info' id='phone' data-err='errphone' data-regex='^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$'></td>
+                        <td> <label class='inErr' id='errphone'></label></td></tr>
+                    <input type='button' id='saveButton' value='Save' style='height:32px;width:64px'>
+                    <input type='button' id='updateButton' value='Update' style='height:32px;width:64px'>
+                    <input type='button' id='cancelButton' value='Cancel' style='height:32px;width:64px'>
+                </table>
+            </div>
+        </fieldset></br>
+        <input type='button' id='addButton' value='Add' style='height:32px;width:64px'>
+        <fieldset><legend>Address List</legend>
+            <div id="divAddressList">
+                <table id="tblAddressList">
+                    
+                </table>
+            </div>
+        </fieldset>
+
+	</body>
+</html>
